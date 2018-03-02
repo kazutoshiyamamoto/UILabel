@@ -31,6 +31,10 @@ class ViewController: UIViewController {
         myLabel2.text = String(tanka*kosu)
         myLabel3.text = "金額" + myLabel2.text! + "円"
         
+        myLabel1.textAlignment = .left
+        myLabel2.textAlignment = .center
+        myLabel3.textAlignment = .right
+        
     }
 
     override func didReceiveMemoryWarning() {
