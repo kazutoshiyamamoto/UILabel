@@ -19,6 +19,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var myLabel3: UILabel!
     
+    
+    @IBOutlet weak var myLabel4: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -34,6 +37,24 @@ class ViewController: UIViewController {
         myLabel1.textAlignment = .left
         myLabel2.textAlignment = .center
         myLabel3.textAlignment = .right
+        
+        // 正または負の値でテストしてみる
+        // myLabel.text = "10.2"
+        myLabel4.text = "-1.5"
+        
+        // myLabelに入っている数値
+        guard let num = Double(myLabel4.text!) else {
+            return
+        }
+        
+        // 文字色と背景色の設定
+        if num >= 0.0 {
+            myLabel4.textColor = UIColor.black
+            myLabel4.backgroundColor = UIColor.white
+        } else {
+            myLabel4.textColor = UIColor.white
+            myLabel4.backgroundColor = UIColor.red
+        }
         
     }
 
